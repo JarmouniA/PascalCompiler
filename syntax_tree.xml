@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+<PROGRAM>
+{PROGRAM, PROGRAM}
+{ID, SORT}
+{SC, ;}
+<BLOC>
+<CONSTS>
+{CONST, CONST}
+{ID, MAXELTS}
+{EQ, =}
+{NUM, 50}
+{SC, ;}
+{ID, CH0}
+{EQ, =}
+{CHARVAL, b}
+{SC, ;}
+{ID, C}
+{EQ, =}
+{STRVAL, 0}
+{SC, ;}
+</CONSTS>
+<TYPES>
+{TYPE, TYPE}
+{ID, INTARRTYPE}
+{EQ, =}
+{ARRAY, ARRAY}
+{OB, [}
+{NUM, 1}
+{PT, .}
+{PT, .}
+{ID, MAXELTS}
+{CB, ]}
+{OF, OF}
+{INTEGER, INTEGER}
+{SC, ;}
+</TYPES>
+<VARS>
+{VAR, VAR}
+{ID, I}
+{COMMA, ,}
+{ID, J}
+{COMMA, ,}
+{ID, TMP}
+{COMMA, ,}
+{ID, SIZE}
+{CL, :}
+{INTEGER, INTEGER}
+{SC, ;}
+{ID, CH}
+{CL, :}
+{CHAR, CHAR}
+{EQ, =}
+{CHARVAL, M}
+{SC, ;}
+{ID, D}
+{CL, :}
+{STRING, STRING}
+{EQ, =}
+{STRVAL, 1}
+{SC, ;}
+{ID, ARR}
+{CL, :}
+{ID, INTARRTYPE}
+{SC, ;}
+</VARS>
+<FUNCTS>
+</FUNCTS>
+<PRCDS>
+{PROCEDURE, PROCEDURE}
+{ID, READARR}
+{OP, (}
+{VAR, VAR}
+{ID, SIZE}
+{CL, :}
+{INTEGER, INTEGER}
+{SC, ;}
+{VAR, VAR}
+{ID, A}
+{CL, :}
+{ID, INTARRTYPE}
+{CP, )}
+{SC, ;}
+<BLOC>
+<CONSTS>
+</CONSTS>
+<TYPES>
+</TYPES>
+<VARS>
+</VARS>
+<FUNCTS>
+</FUNCTS>
+<PRCDS>
+</PRCDS>
+<INSTS>
+{BEGIN, BEGIN}
+<INST>
+{ID, SIZE}
+{ASSIGN, :=}
+{NUM, 1}
+</INST>
+{SC, ;}
+<INST>
+{WHILE, WHILE}
+{NOT, NOT}
+{ID, EOF}
+{DO, DO}
+<INSTS>
+{BEGIN, BEGIN}
+<INST>
+{READLN, READLN}
+{OP, (}
+{ID, A}
+{OB, [}
+{ID, SIZE}
+{CB, ]}
+{CP, )}
+</INST>
+{SC, ;}
+<INST>
+{IF, IF}
+{NOT, NOT}
+{ID, EOF}
+{THEN, THEN}
+<INST>
+{ID, SIZE}
+{ASSIGN, :=}
+{ID, SIZE}
+{PLUS, +}
+{NUM, 1}
+</INST>
+</INST>
+{END, END}
+</INSTS>
+</INST>
+{END, END}
+</INSTS>
+</BLOC>
+{SC, ;}
+</PRCDS>
+<INSTS>
+{BEGIN, BEGIN}
+<INST>
+{ID, READARR}
+{OP, (}
+{ID, SIZE}
+{COMMA, ,}
+{ID, ARR}
+{CP, )}
+</INST>
+{SC, ;}
+<INST>
+{FOR, FOR}
+{ID, I}
+{ASSIGN, :=}
+{ID, SIZE}
+{MINUS, -}
+{NUM, 1}
+{DOWNTO, DOWNTO}
+{NUM, 1}
+{DO, DO}
+<INST>
+{FOR, FOR}
+{ID, J}
+{ASSIGN, :=}
+{NUM, 1}
+{TO, TO}
+{ID, I}
+{DO, DO}
+<INST>
+{IF, IF}
+{ID, ARR}
+{OB, [}
+{ID, J}
+{CB, ]}
+{SUP, >}
+{ID, ARR}
+{OB, [}
+{ID, J}
+{PLUS, +}
+{NUM, 1}
+{CB, ]}
+{THEN, THEN}
+<INSTS>
+{BEGIN, BEGIN}
+<INST>
+{ID, TMP}
+{ASSIGN, :=}
+{ID, ARR}
+{OB, [}
+{ID, J}
+{CB, ]}
+</INST>
+{SC, ;}
+<INST>
+{ID, ARR}
+{OB, [}
+{ID, J}
+{CB, ]}
+{ASSIGN, :=}
+{ID, ARR}
+{OB, [}
+{ID, J}
+{PLUS, +}
+{NUM, 1}
+{CB, ]}
+</INST>
+{SC, ;}
+<INST>
+{ID, ARR}
+{OB, [}
+{ID, J}
+{PLUS, +}
+{NUM, 1}
+{CB, ]}
+{ASSIGN, :=}
+{ID, TMP}
+</INST>
+{END, END}
+</INSTS>
+</INST>
+</INST>
+</INST>
+{SC, ;}
+<INST>
+{FOR, FOR}
+{ID, I}
+{ASSIGN, :=}
+{NUM, 1}
+{TO, TO}
+{ID, SIZE}
+{DO, DO}
+<INST>
+{WRITELN, WRITELN}
+{OP, (}
+{STRVAL, 2}
+{COMMA, ,}
+{ID, ARR}
+{OB, [}
+{ID, I}
+{CB, ]}
+{CP, )}
+</INST>
+</INST>
+{END, END}
+</INSTS>
+</BLOC>
+{PT, .}
+</PROGRAM>
+</note>

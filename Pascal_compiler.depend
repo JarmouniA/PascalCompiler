@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1607053570 source:d:\ensias\compilation\pascal_compiler\tokenizer.c
+	"dependencies.h"
+	"tokenizer.h"
+
+1607054555 d:\ensias\compilation\pascal_compiler\dependencies.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<stdbool.h>
+
+1607053926 source:d:\ensias\compilation\pascal_compiler\main.c
+	"dependencies.h"
+	"header.h"
+
+1607054549 d:\ensias\compilation\pascal_compiler\header.h
+
+1607054526 d:\ensias\compilation\pascal_compiler\tokenizer.h
+
+1609465521 source:d:\github\pascal_compiler\main.c
+	"dependencies.h"
+	"header.h"
+
+1609468123 d:\github\pascal_compiler\dependencies.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<stdbool.h>
+
+1609458952 d:\github\pascal_compiler\header.h
+
+1609458717 source:d:\github\pascal_compiler\tokenizer.c
+	"dependencies.h"
+	"tokenizer.h"
+
+1609468155 d:\github\pascal_compiler\tokenizer.h
+
+1609464557 source:d:\github\pascal_compiler\syntax_analyzer.c
+	"dependencies.h"
+	"syntax_analyzer.h"
+
+1609463763 d:\github\pascal_compiler\syntax_analyzer.h
+
+1609461426 source:d:\github\pascal_compiler\semantic_analyzer.c
+	"dependencies.h"
+	"semantic_analyzer.h"
+
+1609461489 d:\github\pascal_compiler\semantic_analyzer.h
+

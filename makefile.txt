@@ -1,0 +1,14 @@
+OBJS=obj\Release\main.o obj\Release\semantic_analyzer.o obj\Release\syntax_analyzer.o obj\Release\tokenizer.o
+
+COMPILER_FLAGS=-Wall -O2
+
+all: main.o semantic_analyzer.o syntax_analyzer.o tokenizer.o
+	gcc -o .\Pascal_compiler.exe $(OBJS) -s
+main.o: dependencies.h header.h
+	gcc $(COMPILER_FLAGS) -c .\main.c -o obj\Release\main.o
+semantic_analyzer.o: dependencies.h semantic_analyzer.h
+	gcc $(COMPILER_FLAGS) -c .\semantic_analyzer.c -o obj\Release\semantic_analyzer.o
+syntax_analyzer.o: dependencies.h syntax_analyzer.h
+	gcc $(COMPILER_FLAGS) -c .\syntax_analyzer.c -o obj\Release\syntax_analyzer.o
+tokenizer.o: dependencies.h tokenizer.h
+	gcc $(COMPILER_FLAGS) -c .\tokenizer.c -o obj\Release\tokenizer.o
